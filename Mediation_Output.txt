@@ -1,0 +1,288 @@
+Mediation analysis
+
+Observations:  45, Replications:  45
+Predictor (X): expectation, Outcome (Y): rating: Mediator (M): NPS
+
+Covariates: Yes,   1 columns
+
+Multi-level analysis.
+Options:
+	Multilevel weights: Yes
+	Plots: No
+	Bootstrap: Yes
+	Sign perm: No
+	Robust: No
+	Logistic(Y): No
+	Bootstrap 1st level: No
+	Bootstrap or sign perm samples: 10000
+
+Getting estimates for replications: 000001002003004005006007008009010011012013014015016017018019020021022023024025026027028029030031032033034035036037038039040041042043044045 Done.
+Bootstrapping 10000 samples... Min p-value is 0.000100. Adding   0 samples
+ Bootstrapping...Estimating variance components based on 10000 bootstrap samples
+ Done in   0 s 
+
+________________________________________
+Average p-value tolerance (average max alpha): 0.0060
+
+Multi-level model
+	a	b	c'	c	ab	
+Coeff	0.02	0.28	0.25	0.27	0.00	
+STE	0.02	0.02	0.03	0.03	0.00	
+t (~N)	1.20	11.77	7.87	8.16	1.38	
+Z	1.21	3.87	3.93	3.90	1.41	
+p	0.2256	0.0001	0.0001	0.0001	0.1576	
+
+________________________________________
+Total time:   0 s
+Mediation analysis
+
+Observations:  45, Replications:  45
+Predictor (X): expectation, Outcome (Y): rating: Mediator (M): SIIPS
+
+Covariates: Yes,   1 columns
+
+Multi-level analysis.
+Options:
+	Multilevel weights: Yes
+	Plots: No
+	Bootstrap: Yes
+	Sign perm: No
+	Robust: No
+	Logistic(Y): No
+	Bootstrap 1st level: No
+	Bootstrap or sign perm samples: 10000
+
+Getting estimates for replications: 000001002003004005006007008009010011012013014015016017018019020021022023024025026027028029030031032033034035036037038039040041042043044045 Done.
+Bootstrapping 10000 samples... Min p-value is 0.000100. Adding   0 samples
+ Bootstrapping...Estimating variance components based on 10000 bootstrap samples
+ Done in   0 s 
+
+________________________________________
+Average p-value tolerance (average max alpha): 0.0060
+
+Multi-level model
+	a	b	c'	c	ab	
+Coeff	0.06	0.15	0.26	0.27	0.00	
+STE	0.01	0.03	0.03	0.03	0.00	
+t (~N)	4.14	4.90	7.89	8.02	2.24	
+Z	3.86	3.79	4.01	3.96	2.36	
+p	0.0001	0.0002	0.0001	0.0001	0.0182	
+
+________________________________________
+Total time:   0 s
+Mediation analysis
+
+Observations:  45, Replications:  45
+Predictor (X): intensity, Outcome (Y): rating: Mediator (M): NPS
+
+Covariates: Yes,   1 columns
+
+Multi-level analysis.
+Options:
+	Multilevel weights: Yes
+	Plots: No
+	Bootstrap: Yes
+	Sign perm: No
+	Robust: No
+	Logistic(Y): No
+	Bootstrap 1st level: No
+	Bootstrap or sign perm samples: 10000
+
+Getting estimates for replications: 000001002003004005006007008009010011012013014015016017018019020021022023024025026027028029030031032033034035036037038039040041042043044045 Done.
+Bootstrapping 10000 samples... Min p-value is 0.000100. Adding   0 samples
+ Bootstrapping...Estimating variance components based on 10000 bootstrap samples
+ Done in   0 s 
+
+________________________________________
+Average p-value tolerance (average max alpha): 0.0060
+
+Multi-level model
+	a	b	c'	c	ab	
+Coeff	0.11	0.28	0.26	0.29	0.02	
+STE	0.01	0.02	0.02	0.02	0.00	
+t (~N)	7.54	11.83	14.96	16.58	7.17	
+Z	3.99	3.86	3.86	3.83	3.76	
+p	0.0001	0.0001	0.0001	0.0001	0.0002	
+
+________________________________________
+Total time:   0 s
+Mediation analysis
+
+Observations:  45, Replications:  45
+Predictor (X): intensity, Outcome (Y): rating: Mediator (M): SIIPS
+
+Covariates: Yes,   1 columns
+
+Multi-level analysis.
+Options:
+	Multilevel weights: Yes
+	Plots: No
+	Bootstrap: Yes
+	Sign perm: No
+	Robust: No
+	Logistic(Y): No
+	Bootstrap 1st level: No
+	Bootstrap or sign perm samples: 10000
+
+Getting estimates for replications: 000001002003004005006007008009010011012013014015016017018019020021022023024025026027028029030031032033034035036037038039040041042043044045 Done.
+Bootstrapping 10000 samples... Min p-value is 0.000100. Adding   0 samples
+ Bootstrapping...Estimating variance components based on 10000 bootstrap samples
+ Done in   0 s 
+
+________________________________________
+Average p-value tolerance (average max alpha): 0.0060
+
+Multi-level model
+	a	b	c'	c	ab	
+Coeff	0.02	0.15	0.29	0.29	0.00	
+STE	0.01	0.03	0.02	0.02	0.00	
+t (~N)	1.28	4.85	16.86	16.40	1.38	
+Z	1.22	3.81	3.75	3.76	1.34	
+p	0.2215	0.0001	0.0002	0.0002	0.1786	
+
+________________________________________
+Total time:   0 s
+Mediation analysis
+
+Observations:  45, Replications:  45
+Predictor (X): expectation, Outcome (Y): rating: Mediator (M): NPS
+
+Covariates: Yes,   1 columns
+
+Multi-level analysis.
+Options:
+	Multilevel weights: Yes
+	Plots: No
+	Bootstrap: Yes
+	Sign perm: No
+	Robust: No
+	Logistic(Y): No
+	Bootstrap 1st level: No
+	Bootstrap or sign perm samples: 10000
+
+Getting estimates for replications: 000001002003004005006007008009010011012013014015016017018019020021022023024025026027028029030031032033034035036037038039040041042043044045 Done.
+Bootstrapping 10000 samples... Min p-value is 0.000100. Adding   0 samples
+ Bootstrapping...Estimating variance components based on 10000 bootstrap samples
+ Done in   0 s 
+
+________________________________________
+Average p-value tolerance (average max alpha): 0.0060
+
+Multi-level model
+	a	b	c'	c	ab	
+Coeff	-0.01	0.02	0.29	0.29	-0.00	
+STE	0.02	0.01	0.04	0.04	0.00	
+t (~N)	-0.78	1.63	8.08	8.07	-1.57	
+Z	-0.76	1.61	3.93	3.93	-1.59	
+p	0.4502	0.1081	0.0001	0.0001	0.1112	
+
+________________________________________
+Total time:   0 s
+Mediation analysis
+
+Observations:  45, Replications:  45
+Predictor (X): expectation, Outcome (Y): rating: Mediator (M): SIIPS
+
+Covariates: Yes,   1 columns
+
+Multi-level analysis.
+Options:
+	Multilevel weights: Yes
+	Plots: No
+	Bootstrap: Yes
+	Sign perm: No
+	Robust: No
+	Logistic(Y): No
+	Bootstrap 1st level: No
+	Bootstrap or sign perm samples: 10000
+
+Getting estimates for replications: 000001002003004005006007008009010011012013014015016017018019020021022023024025026027028029030031032033034035036037038039040041042043044045 Done.
+Bootstrapping 10000 samples... Min p-value is 0.000100. Adding   0 samples
+ Bootstrapping...Estimating variance components based on 10000 bootstrap samples
+ Done in   0 s 
+
+________________________________________
+Average p-value tolerance (average max alpha): 0.0060
+
+Multi-level model
+	a	b	c'	c	ab	
+Coeff	0.00	0.02	0.28	0.29	0.00	
+STE	0.01	0.01	0.04	0.04	0.00	
+t (~N)	0.17	1.67	8.04	8.12	1.13	
+Z	0.16	1.71	3.89	3.89	1.12	
+p	0.8718	0.0876	0.0001	0.0001	0.2621	
+
+________________________________________
+Total time:   0 s
+Mediation analysis
+
+Observations:  45, Replications:  45
+Predictor (X): intensity, Outcome (Y): rating: Mediator (M): NPS
+
+Covariates: Yes,   1 columns
+
+Multi-level analysis.
+Options:
+	Multilevel weights: Yes
+	Plots: No
+	Bootstrap: Yes
+	Sign perm: No
+	Robust: No
+	Logistic(Y): No
+	Bootstrap 1st level: No
+	Bootstrap or sign perm samples: 10000
+
+Getting estimates for replications: 000001002003004005006007008009010011012013014015016017018019020021022023024025026027028029030031032033034035036037038039040041042043044045 Done.
+Bootstrapping 10000 samples... Min p-value is 0.000100. Adding   0 samples
+ Bootstrapping...Estimating variance components based on 10000 bootstrap samples
+ Done in   0 s 
+
+________________________________________
+Average p-value tolerance (average max alpha): 0.0060
+
+Multi-level model
+	a	b	c'	c	ab	
+Coeff	0.01	0.02	0.34	0.34	0.00	
+STE	0.01	0.01	0.03	0.03	0.00	
+t (~N)	1.12	1.64	13.16	13.47	0.72	
+Z	1.14	1.66	3.89	3.90	0.73	
+p	0.2541	0.0966	0.0001	0.0001	0.4658	
+
+________________________________________
+Total time:   0 s
+Mediation analysis
+
+Observations:  45, Replications:  45
+Predictor (X): intensity, Outcome (Y): rating: Mediator (M): SIIPS
+
+Covariates: Yes,   1 columns
+
+Multi-level analysis.
+Options:
+	Multilevel weights: Yes
+	Plots: No
+	Bootstrap: Yes
+	Sign perm: No
+	Robust: No
+	Logistic(Y): No
+	Bootstrap 1st level: No
+	Bootstrap or sign perm samples: 10000
+
+Getting estimates for replications: 000001002003004005006007008009010011012013014015016017018019020021022023024025026027028029030031032033034035036037038039040041042043044045 Done.
+Bootstrapping 10000 samples... Min p-value is 0.000100. Adding   0 samples
+ Bootstrapping...Estimating variance components based on 10000 bootstrap samples
+ Done in   0 s 
+
+________________________________________
+Average p-value tolerance (average max alpha): 0.0060
+
+Multi-level model
+	a	b	c'	c	ab	
+Coeff	-0.02	0.02	0.34	0.34	0.00	
+STE	0.01	0.01	0.02	0.03	0.00	
+t (~N)	-1.19	1.69	13.75	13.49	0.12	
+Z	-1.19	1.77	3.88	3.94	0.13	
+p	0.2345	0.0771	0.0001	0.0001	0.8950	
+
+________________________________________
+Total time:   0 s
