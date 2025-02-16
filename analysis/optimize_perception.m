@@ -27,13 +27,13 @@ params_filename = fullfile(main_dir, 'data_for_analysis/processed_data/optimized
 params_data = readtable(params_filename);
 
 % loop through participants and compute expectations based on their
-% koptimized k and b
+% optimized k and b
 participants = unique(percept_data.participant);
 percept_data.weighted_expectation = zeros(height(percept_data), 1);
 
 % while looping, also convert the stim_level (stimulus intensity) to the
 % 0-100 rating scale for each participant, based on the calibration data
-calibration_data_filename = fullfile(main_dir, 'analysis/data_for_analysis/task-stimresp_all_subjs.csv');
+calibration_data_filename = fullfile(main_dir, 'data_for_analysis/raw_data/task-stimresp_all_subjs.csv');
 calibration_data = readtable(calibration_data_filename);
 
 vas_columns = 10:19;

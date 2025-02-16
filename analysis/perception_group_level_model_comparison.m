@@ -1,6 +1,6 @@
 % group level model comparison
 
-main_dir = 'analysis';
+main_dir = 'data_for_analysis/processed_data';
 output_dir = 'data_for_analysis/processed_data';
 % get the optimization table with all the parameters and sse per model per
 % participant
@@ -8,7 +8,7 @@ optimization_table_filename = fullfile(main_dir, 'perception_models_params_measu
 optimization_table = readtable(optimization_table_filename);
 
 % get the perception data with trial level predictions per model
-percept_data_filename = fullfile(main_dir, 'data_for_analysis', 'task-expectpercept_all_subjs_with_pred_after_exclusions.csv');
+percept_data_filename = fullfile(main_dir, 'task-expectpercept_all_subjs_with_pred_after_exclusions.csv');
 percept_data = readtable(percept_data_filename);
 
 % create a table for the group level measures and stats per model
@@ -63,3 +63,27 @@ end
 
 writetable(models_group_level, fullfile(output_dir, 'percept_models_group_level.csv'));
 writetable(model_comparison_group, fullfile(output_dir, 'percept_model_comparison_group.csv'));
+
+% get stats for the scaling factor (for paper revision - comment 3.9)
+optimization_table.scaling_factor_pain(strcmp(optimization_table.best_model, 'model1')) = optimization_table.model1_s_p(strcmp(optimization_table.best_model, 'model1'));
+optimization_table.scaling_factor_vision(strcmp(optimization_table.best_model, 'model1')) = optimization_table.model1_s_v(strcmp(optimization_table.best_model, 'model1'));
+optimization_table.scaling_factor_pain(strcmp(optimization_table.best_model, 'model2')) = optimization_table.model2_s_p(strcmp(optimization_table.best_model, 'model2'));
+optimization_table.scaling_factor_vision(strcmp(optimization_table.best_model, 'model2')) = optimization_table.model2_s_v(strcmp(optimization_table.best_model, 'model2'));
+optimization_table.scaling_factor_pain(strcmp(optimization_table.best_model, 'model3')) = optimization_table.model3_s_p(strcmp(optimization_table.best_model, 'model3'));
+optimization_table.scaling_factor_vision(strcmp(optimization_table.best_model, 'model3')) = optimization_table.model3_s_v(strcmp(optimization_table.best_model, 'model3'));
+optimization_table.scaling_factor_pain(strcmp(optimization_table.best_model, 'model2mod')) = optimization_table.model2mod_s_p(strcmp(optimization_table.best_model, 'model2mod'));
+optimization_table.scaling_factor_vision(strcmp(optimization_table.best_model, 'model2mod')) = optimization_table.model2mod_s_v(strcmp(optimization_table.best_model, 'model2mod'));
+optimization_table.scaling_factor_pain(strcmp(optimization_table.best_model, 'model3mod')) = optimization_table.model3mod_s_p(strcmp(optimization_table.best_model, 'model3mod'));
+optimization_table.scaling_factor_vision(strcmp(optimization_table.best_model, 'model3mod')) = optimization_table.model3mod_s_v(strcmp(optimization_table.best_model, 'model3mod'));
+
+mean(optimization_table.scaling_factor_pain);
+std(optimization_table.scaling_factor_pain);
+mean(optimization_table.scaling_factor_vision);
+std(optimization_table.scaling_factor_vision);
+% different from 1?
+% pain
+[h,p,~,stats] = ttest(optimization_table.scaling_factor_pain, 1);
+% vision
+[h,p,~,stats] = ttest(optimization_table.scaling_factor_vision, 1);
+% compare between modalities
+[h,p,~,stats] = ttest(optimization_table.scaling_factor_pain, optimization_table.scaling_factor_vision);

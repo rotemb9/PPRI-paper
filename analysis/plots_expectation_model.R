@@ -33,3 +33,70 @@ ggsave('expectation_predicted_vs_observed.pdf',
        height = 120,
        units = "mm",
        dpi = 300)
+
+# test predicted-observed expectation correlation and RMSE
+correlation_per_participant_modality <- data %>%
+     group_by(participant, modality) %>%
+     summarize(correlation = cor(rating, predicted_expect, use = "complete.obs"), .groups = "drop")
+
+corr_mean_sd <- correlation_per_participant_modality %>%
+  group_by(modality) %>%
+  summarize(
+    mean_correlation = mean(correlation),
+    sd_correlation = sd(correlation),
+    n = n(),  # Number of participants per modality
+    .groups = "drop"
+  )
+
+rmse_per_participant_modality <- data %>%
+  group_by(participant, modality) %>%
+  summarize(rmse = sqrt(mean((rating - predicted_expect)^2, na.rm = TRUE)), .groups = "drop")
+
+rmse_mean_sd <- rmse_per_participant_modality %>%
+  group_by(modality) %>%
+  summarize(
+    mean_cor = mean(rmse),
+    sd_cor = sd(rmse),
+    .groups = "drop"
+  )
+
+# test the correlation within each cue mean
+correlation_per_participant_modality_cuemean <- data %>%
+  group_by(participant, modality, cue_mean) %>%
+  summarize(correlation = cor(rating, predicted_expect, use = "complete.obs"), .groups = "drop")
+
+corr_mean_sd_bycuemean <- correlation_per_participant_modality_cuemean %>%
+  group_by(modality, cue_mean) %>%
+  summarize(mean_cor = mean(correlation), sd_cor = sd(correlation), .groups = "drop")
+
+# Perform a one-sample t-test to check if the mean correlation is significantly different from zero
+correlation_significance <- correlation_per_participant_modality %>%
+  group_by(modality) %>%
+  summarize(
+    t_test_result = list(t.test(correlation, mu = 0)),  # Test if the mean correlation is different from 0
+    .groups = "drop"
+  )
+
+correlation_significance %>%
+  mutate(
+    p_value = sapply(t_test_result, function(x) x$p.value),  # Extract p-value from t-test result
+    mean_correlation = sapply(t_test_result, function(x) x$estimate),  # Extract mean correlation
+    t_statistic = sapply(t_test_result, function(x) x$statistic)  # Extract t-statistic
+  ) %>%
+  select(modality, mean_correlation, t_statistic, p_value)  # Keep relevant columns
+
+# by cue mean level
+correlation_significance_bycuemean <- correlation_per_participant_modality_cuemean %>%
+  group_by(modality, cue_mean) %>%
+  summarize(
+    t_test_result = list(t.test(correlation, mu = 0)),  # Test if the mean correlation is different from 0
+    .groups = "drop"
+  )
+
+correlation_significance_bycuemean %>%
+  mutate(
+    p_value = sapply(t_test_result, function(x) x$p.value),  # Extract p-value from t-test result
+    mean_correlation = sapply(t_test_result, function(x) x$estimate),  # Extract mean correlation
+    t_statistic = sapply(t_test_result, function(x) x$statistic)  # Extract t-statistic
+  ) %>%
+  select(modality, mean_correlation, t_statistic, p_value)  # Keep relevant columns
