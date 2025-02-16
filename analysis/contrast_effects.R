@@ -65,7 +65,7 @@ y_max = ceiling(max(data$pe_sub, na.rm = TRUE) / 10) * 10  # Round up to nearest
 x_min = floor(min(data$pe, na.rm = TRUE) / 10) * 10  # Round down to nearest multiple of 10
 x_max = ceiling(max(data$pe, na.rm = TRUE) / 10) * 10  # Round up to nearest multiple of 10
 
-ggplot(data, aes(x = pe, y = pe_sub)) +
+boundary_effects_plot = ggplot(data, aes(x = pe, y = pe_sub)) +
   geom_point(aes(color = participant, alpha = 0.1)) +  # Add points
   geom_smooth(method = "lm", formula = y ~ poly(x, 3), se = TRUE, color = "blue") +  # Add polynomial trendline
   facet_wrap(
@@ -91,3 +91,11 @@ ggplot(data, aes(x = pe, y = pe_sub)) +
     panel.grid = element_line(color = "gray90")  # Optional: light gridlines
   ) +
   theme(legend.position = "none")  # Remove the legend
+
+ggsave('boundary_effects_plot.pdf',
+       plot = boundary_effects_plot,
+       path = "plots",
+       width = 210,
+       height = 100,
+       units = "mm",
+       dpi = 300)
